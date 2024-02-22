@@ -11,8 +11,8 @@ type Review = {
 
 const Review = ({picture, review, name, text, supporttext} : Review) => {
   return (
-    <div className={`flex flex-col`}>
-        <div className='flex flex-col align-bottom justify-center py-6 px-5 backdrop-blur-md bg-'>
+    <div className='flex flex-col'>
+        <div className='flex flex-col align-bottom justify-center py-6 px-5 backdrop-blur-md'>
             <h2 className='text-white font-semibold leading-9 text-[20px]'>{review}</h2>
 
             <div className='flex flex-row justify-start backdrop-blur-md'>

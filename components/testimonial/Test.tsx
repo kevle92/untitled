@@ -3,6 +3,7 @@ import React from 'react'
 import Button from '../comps/Button'
 import { Splide, SplideSlide , SplideTrack } from '@splidejs/react-splide'
 import Review from './Review'
+import Image from 'next/image';
 
 const Test = () => {
   return (
@@ -20,8 +21,23 @@ const Test = () => {
             <h2 className='text-xl font-normal leading-[30px] text-gray-500'>Hear from some of our amazing customers who are automating their finances.</h2>
         </div>
 
-        <div className='flex justify-center'>
-          <Review picture='' review='' name='Alisa Hester' text='PM, Hourglass' supporttext='Web Design Agency'/>
+        <div className='flex mt-[64px]'>
+          <Splide options= {{gap: '1rem'}} aria-label="Reviews">
+            <div className="custom-wrapper">
+              <SplideSlide>
+                <Image src='/Person1.png' alt='person1' height={480} width={360}/>
+              </SplideSlide>
+              <SplideSlide>
+                <Image src='/Person2.png' alt='person2' height={480} width={360}/>
+              </SplideSlide>
+              <SplideSlide>
+                <Image src='/Person3.png' alt='person3' height={480} width={360}/>
+              </SplideSlide>
+              <SplideTrack> </SplideTrack>
+
+              <div className="splide__arrows" />
+            </div>
+          </Splide>
         </div>
     </section>
   )
